@@ -1,0 +1,76 @@
+.special-offer {
+  @include flex-center(column);
+  margin: 0 auto;
+  margin-top: 69.8px;
+
+  @media (max-width: 1110px) {
+    & {
+      margin-top: 30px;
+      min-width: 420px;
+    }
+  }
+
+  &_header {
+    @include flex-center();
+    width: 100%;
+    justify-content: space-between;
+
+    &__text {
+      font-weight: 700;
+      font-size: 24px;
+      line-height: 28px;
+      color: #000;
+    }
+  }
+
+  &__goods {
+    @include flex-center();
+    width: 100%;
+    justify-content: space-between;
+    margin-top: 16.45px;
+    @media (max-width: 1110px) {
+      & {
+        flex-wrap: wrap;
+        row-gap: 5px;
+      }
+    }
+
+    &__good {
+      @include flex-center(column);
+      gap: 20px;
+      width: 255px;
+      height: 363px;
+      background-color: #fff;
+      @media (max-width: 600px) {
+        & {
+          width: 205px;
+        }
+      }
+
+      .good_text {
+        width: 195px;
+        line-height: 20px;
+        text-align: center;
+      }
+
+      .good_price {
+        font-weight: 500;
+        font-size: 21px;
+        line-height: 25px;
+        text-align: center;
+        color: #000;
+      }
+
+      .good_buy-button {
+        @include flex-center();
+        width: 130px;
+        height: 35px;
+        background: $color_green;
+        border-radius: 30px;
+        letter-spacing: 0.05em;
+        color: #fff;
+        cursor: pointer;
+      }
+    }
+  }
+}

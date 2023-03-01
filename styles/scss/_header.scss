@@ -1,0 +1,127 @@
+.header {
+  @include flex-center(column);
+  margin: 0 auto;
+
+  &_nav {
+    @include flex-center();
+    gap: 30px;
+    background-color: $bcgr_color_grey;
+    @media (max-width: 1110px) {
+      & {
+        justify-content: space-around;
+        gap: 5px;
+        max-width: 100%;
+        min-width: 420px;
+      }
+    }
+
+    a {
+      color: $color_dark;
+      text-decoration: none;
+    }
+  }
+}
+.hr-line {
+  margin-top: -1px;
+  height: 0;
+  width: 100%;
+  border: none;
+  border-top: 1px solid $bcgr_color_grey;
+}
+
+.header_area {
+  @include flex-center(column);
+  width: 100vw;
+  height: 199px;
+  background-color: #fff;
+
+  @media (max-width: 1110px) {
+    & {
+      justify-content: space-around;
+      max-width: 100%;
+      min-width: 420px;
+    }
+  }
+
+  &_logo_contact {
+    display: flex;
+    justify-content: space-between;
+    height: 120px;
+
+    &__logo {
+      @include flex-center();
+      gap: 20px;
+      color: $color_green;
+      font-weight: 700;
+      font-size: 36px;
+      line-height: 42px;
+      letter-spacing: 0.1em;
+
+      @media (max-width: 700px) {
+        & {
+          gap: 10px;
+          font-size: 34px;
+        }
+      }
+    }
+
+    &_callback {
+      @include flex-center();
+      gap: 40px;
+      color: #000;
+
+      @media (max-width: 700px) {
+        & {
+          gap: 0;
+          flex-direction: column;
+          gap: 5px;
+          width: 100%;
+        }
+      }
+
+      &__tel {
+        font-size: 16px;
+        line-height: 19px;
+      }
+
+      &__button {
+        @include flex-center();
+        width: 170px;
+        height: 40px;
+        border: 2px solid $color_green;
+        border-radius: 40px;
+        cursor: pointer;
+
+        @media (max-width: 700px) {
+          & {
+            width: 130px;
+          }
+        }
+      }
+    }
+  }
+
+  &_subnav {
+    @include flex-center();
+    height: 79px;
+    gap: 40px;
+
+    @media (max-width: 1110px) {
+      & {
+        flex-direction: column;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        gap: 20px;
+        width: 100%;
+        min-width: 420px;
+      }
+    }
+
+    a {
+      color: #000;
+      text-decoration: none;
+      font-size: 16px;
+      line-height: 19px;
+    }
+  }
+}

@@ -1,0 +1,45 @@
+@import './variables';
+@import './mixins';
+@import './normalize';
+@import './header';
+@import './sale-banner';
+@import './offer';
+@import './subscribe';
+@import './footer';
+
+.container {
+  width: 1110px;
+  margin: 0 auto;
+  @media (max-width: 1110px) {
+    & {
+      width: 100%;
+      min-width: 420px;
+    }
+  }
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  width: 1920px;
+  background-color: $bcgr_color_grey;
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 16px;
+  color: $color_dark;
+  margin: 0 auto;
+
+  @media (max-width: 1919px) {
+    & {
+      width: 100%;
+    }
+  }
+}
+
+header {
+  nav {
+    height: 50px;
+  }
+}
